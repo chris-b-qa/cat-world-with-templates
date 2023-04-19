@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Cat World!</h1>
+    <p>We have {{ users_count }} users and {{ cats_count }} cats</p>
+    <h2>Here is a picture of a random cat:</h2>
+    <img src="https://cataas.com/cat" alt="A cat">
+
+    <h2>Add new User</h2>
+    <p>Coming soon!</p>
+
+    <h2>Add new Cat</h2>
+    {% if users_count %}
+        <p>Coming soon!</p>
+    {% else %}
+        <p>Can't add Cats until we have some users!</p>
+    {% endif %}
+{% endblock %}
